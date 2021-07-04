@@ -7,18 +7,41 @@ def leg1(angle1, angle2):
     kit.servo[1].angle = angle2
 
 
+leg1(0, 0)
+sleep(1)
+leg1(180, 180)
+sleep(1)
+leg1(180, 0)
+sleep(0.2)
+leg1(180, 180)
+sleep(0.2)
+leg1(180, 0)
+sleep(0.2)
+leg1(180, 180)
 
-def smooth_jab(split):
-    interval = 180 / split
-    start = 0
-    leg1(start, start)
-    sleep(0.5)
-    while start < 180:
-        start = start + interval
-        leg1(start, start)
-        sleep(0.001)
+sleep(1)
 
-smooth_jab(200)
+leg1(0, 180)
+sleep(0.2)
+leg1(180, 180)
+sleep(0.2)
+leg1(0, 180)
+sleep(0.2)
+leg1(180, 180)
+sleep(0.2)
+
+sleep(1)
+
+leg1(0, 0)
+sleep(0.3)
+leg1(180, 180)
+sleep(0.3)
+leg1(0, 0)
+sleep(0.3)
+leg1(180, 180)
+
+
+
 
 
 
