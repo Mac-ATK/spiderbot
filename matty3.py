@@ -31,29 +31,29 @@ lup = 180
 sleeptime = 1
 
 
-leg1(maxval, ldown, ldown)
-#leg2(maxval, ldown, ldown)
+#leg1(maxval, ldown, ldown)
+leg2(maxval, ldown, ldown)
 #leg3(maxval, ldown, ldown)
 #leg4(maxval, ldown, ldown)
 
 sleep(sleeptime)
 
-leg1(minval, lup, lup)
-#leg2(minval, lup, lup)
+#leg1(minval, lup, lup)
+leg2(minval, lup, lup)
 #leg3(minval, lup, lup)
 #leg4(minval, lup, lup)
 
 sleep(sleeptime)
 
-leg1(maxval, ldown, ldown)
-#leg2(maxval, ldown, ldown)
+#leg1(maxval, ldown, ldown)
+leg2(maxval, ldown, ldown)
 #leg3(maxval, ldown, ldown)
 #leg4(maxval, ldown, ldown)
 
 sleep(sleeptime)
 
-leg1(minval, lup, lup)
-#leg2(minval, lup, lup)
+#leg1(minval, lup, lup)
+leg2(minval, lup, lup)
 #leg3(minval, lup, lup)
 #leg4(minval, lup, lup)
 
