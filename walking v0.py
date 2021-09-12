@@ -31,10 +31,10 @@ ldown = 0
 lup = 180
 
 sleeptime = 1
-leg1_thread = threading.Thread(target=leg1, args=(hipstable, lup, lup))
-leg2_thread = threading.Thread(target=leg2, args=(hipstable, lup, lup))
-leg3_thread = threading.Thread(target=leg3, args=(hipstable, lup, lup))
-leg4_thread = threading.Thread(target=leg4, args=(hipstable, lup, lup))
+leg1_thread = threading.Thread(target=leg1, args=(hipstable, lup, lup), daemon=True)
+leg2_thread = threading.Thread(target=leg2, args=(hipstable, lup, lup), daemon=True)
+leg3_thread = threading.Thread(target=leg3, args=(hipstable, lup, lup), daemon=True)
+leg4_thread = threading.Thread(target=leg4, args=(hipstable, lup, lup), daemon=True)
 
 leg1_thread.start()
 leg2_thread.start()
