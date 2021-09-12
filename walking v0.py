@@ -1,6 +1,7 @@
 from adafruit_servokit import ServoKit
 kit = ServoKit(channels=16)
 from time import sleep
+import threading
 
 def leg1(angle1, angle2, angle3):
     kit.servo[0].angle = 180 - angle1
@@ -30,18 +31,23 @@ ldown = 0
 lup = 180
 
 sleeptime = 1
+leg1_thread = threading.Thread(target=leg1, args=(hipstable, lup, lup), daemon=True)
+leg2_thread = threading.Thread(target=leg2, args=(hipstable, lup, lup), daemon=True)
+leg3_thread = threading.Thread(target=leg3, args=(hipstable, lup, lup), daemon=True)
+leg4_thread = threading.Thread(target=leg4, args=(hipstable, lup, lup), daemon=True)
 
-leg1(hipstable, lup, lup)
-leg2(hipstable, lup, lup)
-leg3(hipstable, lup, lup)
-leg4(hipstable, lup, lup)
+leg1_thread.start()
+leg2_thread.start()
+leg3_thread.start()
+leg4_thread.start()
 
-sleep(1)
 
-leg1(hipstable, ldown, ldown)
-leg2(hipstable, ldown, ldown)
-leg3(hipstable, ldown, ldown)
-leg4(hipstable, ldown, ldown)
+#sleep(1)
+
+#leg1(hipstable, ldown, ldown)
+#leg2(hipstable, ldown, ldown)
+#leg3(hipstable, ldown, ldown)
+#leg4(hipstable, ldown, ldown)
 
 
 
