@@ -24,6 +24,7 @@ def leg4(angle1, angle2, angle3):
 
 maxval = 50
 minval = 180
+stableval = 140
 
 ldown = 0
 lup = 180
@@ -32,17 +33,17 @@ sleeptime = 1
 
 testno = 110
 
-leg1(minval, lup, lup)
-leg2(minval, lup, lup)
-leg3(minval, lup, lup)
-leg4(minval, lup, lup)
+leg1(stableval, lup, lup)
+leg2(stableval, lup, lup)
+leg3(stableval, lup, lup)
+leg4(stableval, lup, lup)
 
 sleep(1)
 
-leg1(minval, ldown, ldown)
-leg2(minval, ldown, ldown)
-leg3(minval, ldown, ldown)
-leg4(minval, ldown, ldown)
+leg1(stableval, ldown, ldown)
+leg2(stableval, ldown, ldown)
+leg3(stableval, ldown, ldown)
+leg4(stableval, ldown, ldown)
 
 #sleep(1)
 
