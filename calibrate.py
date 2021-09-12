@@ -32,33 +32,33 @@ sleeptime = 1
 
 testno = 110
 
-#leg1(minval, lup, lup)
+leg1(minval, lup, lup)
 leg2(minval, lup, lup)
-#leg3(minval, lup, lup)
-#leg4(minval, lup, lup)
+leg3(minval, lup, lup)
+leg4(minval, lup, lup)
 
-sleep(1)
+#sleep(1)
 
 #leg1(minval, ldown, ldown)
-leg2(minval, ldown, ldown)
+#leg2(minval, ldown, ldown)
 #leg3(minval, ldown, ldown)
 #leg4(minval, ldown, ldown)
 
-sleep(1)
+#sleep(1)
 
 #leg1(minval, lup, lup)
-leg2(minval, lup, lup)
+#leg2(minval, lup, lup)
 #leg3(minval, lup, lup)
 #leg4(minval, lup, lup)
 
-sleep(1)
+#sleep(1)
 
 #leg1(minval, ldown, ldown)
-leg2(minval, ldown, ldown)
+#leg2(minval, ldown, ldown)
 #leg3(minval, ldown, ldown)
 #leg4(minval, ldown, ldown)
 
-sleep(1)
+#sleep(1)
 
 
 
