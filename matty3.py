@@ -1,5 +1,5 @@
 from adafruit_servokit import ServoKit
-kit = ServoKit(channels=8)
+kit = ServoKit(channels=16)
 from time import sleep
 
 def leg1(angle1, angle2, angle3):
