@@ -24,10 +24,10 @@ def leg4(angle1, angle2, angle3):
 
 maxval = 50
 minval = 180
-stableval = 140
+stableval = 130
 
-ldown = 0
-lup = 180
+ldown = 40
+lup = 120
 
 sleeptime = 1
 
