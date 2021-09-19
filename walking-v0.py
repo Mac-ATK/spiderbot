@@ -34,9 +34,9 @@ leg1(hipin, lup, lup)
 for i in range(8):
     diff = hipin - hipout
     for i in range(4):
-        leg1(hipin+(diff/4), lup, lup)
+        leg1(hipin-(diff/4), lup, lup)
     for i in range(4):
-        leg1(hipout-(diff/4), lup, lup) 
+        leg1(hipout+(diff/4), lup, lup) 
 
 
 
