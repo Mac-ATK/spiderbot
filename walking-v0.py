@@ -51,8 +51,8 @@ for i in range(32):
     leg3(current_3, lup, lup)
     leg4(current_4, lup, lup)
     sleep(1)
-    if current_1 == hipout:
-        current_1 = hipin
+    if current_1 == hipin:
+        current_1 = hipout
         leg1(current_1, lup, lup)
     if current_2 == hipout:
         current_2 = hipin
@@ -60,8 +60,8 @@ for i in range(32):
     if current_3 == hipout:
         current_3 = hipin
         leg3(current_3, lup, lup)
-    if current_4 == hipout:
-        current_4 = hipin
+    if current_4 == hipin:
+        current_4 = hipout
         leg4(current_4, lup, lup)
     sleep(1)
 
