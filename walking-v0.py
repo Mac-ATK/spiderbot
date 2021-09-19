@@ -33,11 +33,15 @@ leg1(hipin, lup, lup)
 
 for i in range(8):
     diff = hipin - hipout
+    current = hipin
     for i in range(4):
-        leg1(hipin-(diff/4), lup, lup)
+        current = current-(diff/4)
+        leg1(current, lup, lup)
         sleep(0.5)
+    current = hipout
     for i in range(4):
-        leg1(hipout+(diff/4), lup, lup)
+        current = current+(diff/4)
+        leg1(current, lup, lup)
         sleep(0.5) 
 
 
