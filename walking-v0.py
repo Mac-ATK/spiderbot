@@ -31,7 +31,7 @@ lup = 180
 
 hipdiff = hipin - hipout
 
-current_1 = hipin-(hipdiff/3)
+current_1 = hipin
 current_2 = hipin
 current_3 = hipin-((hipdiff/3)*2)
 current_4 = hipin-((hipdiff/3)*2)
