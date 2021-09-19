@@ -24,7 +24,7 @@ def leg4(angle1, angle2, angle3):
     kit.servo[11].angle = angle3
 
 hipin = 180
-hipout = 110
+hipout = 115
 
 ldown = 0
 lup = 180
