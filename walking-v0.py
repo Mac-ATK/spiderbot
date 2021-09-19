@@ -24,25 +24,43 @@ def leg4(angle1, angle2, angle3):
     kit.servo[11].angle = angle3
 
 hipin = 180
-hipout = 115
+hipout = 120
 
-ldown = 0
+ldown = 100
 lup = 180
 
-leg1(hipin, lup, lup)
+hipdiff = hipin - hipout
+
+current_1 = hipin
+current_2 = hipin
+current_3 = hipin-(hipdiff/3)
+current_4 = hipin-(hipdiff/3)
+
+leg1(current_1, lup, lup)
+leg2(current_2, lup, lup)
+leg3(current_3, lup, lup)
+leg4(current_4, lup, lup)
 
 for i in range(8):
-    diff = hipin - hipout
-    current = hipin
-    for i in range(4):
-        current = current-(diff/4)
-        leg1(current, lup, lup)
-        sleep(0.5)
-    current = hipout
-    for i in range(4):
-        current = current+(diff/4)
-        leg1(current, lup, lup)
-        sleep(0.5) 
+    current_1, current_2, current_3, current_4 -= (hipdiff/3)
+    leg1(current_1, lup, lup)
+    leg2(current_2, lup, lup)
+    leg3(current_3, lup, lup)
+    leg4(current_4, lup, lup)
+    if current_1 == hipout:
+        current_1 = hipin
+        leg1(current_1, lup, lup)
+    if current_2 == hipout:
+        current_2 = hipin
+        leg2(current_2, lup, lup)
+    if current_3 == hipout:
+        current_3 = hipin
+        leg3(current_3, lup, lup)
+    if current_4 == hipout:
+        current_4 = hipin
+        leg4(current_4, lup, lup)
+    sleep(0.2)
+
 
 
 
