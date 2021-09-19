@@ -42,7 +42,17 @@ leg3_thread.start()
 leg4_thread.start()
 
 
-#sleep(1)
+#sleep(5)
+
+#leg1_thread2 = threading.Thread(target=leg1, args=(hipstable, lup, lup), daemon=True)
+#leg2_thread2 = threading.Thread(target=leg2, args=(hipstable, lup, lup), daemon=True)
+#leg3_thread2 = threading.Thread(target=leg3, args=(hipstable, lup, lup), daemon=True)
+#leg4_thread2 = threading.Thread(target=leg4, args=(hipstable, lup, lup), daemon=True)
+
+#leg1_thread2.start()
+#leg2_thread2.start()
+#leg3_thread2.start()
+#leg4_thread2.start()
 
 #leg1(hipstable, ldown, ldown)
 #leg2(hipstable, ldown, ldown)
