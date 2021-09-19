@@ -72,18 +72,28 @@ for i in range(32):
     else:
         current_2 -= (hipdiff/3)
     if current_3 == hipout:
-        current_3 = hipin
         leg_3 = lup
+        leg3(current_3, leg_3, leg_3)
+        sleep(0.2)
+        current_3 = hipin
         leg3(current_3, leg_3, leg_3)
         sleep(0.2)
         leg_3 = ldown
         leg3(current_3, leg_3, leg_3)
+        sleep(0.2)
     else:
         current_3 -= (hipdiff/3)
         leg_3 = ldown
     if current_4 == hipin:
-        current_4 = hipout
         leg_4 = lup
+        leg4(current_4, leg_4, leg_4)
+        sleep(0.2)
+        current_4 = hipout
+        leg4(current_4, leg_4, leg_4)
+        sleep(0.2)
+        leg_4 = ldown
+        leg4(current_4, leg_4, leg_4)
+        sleep(0.2)
     else:
         current_4 += (hipdiff/3)
         leg_4 = ldown
