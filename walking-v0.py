@@ -50,50 +50,50 @@ for i in range(32):
     if current_1 == hipin:
         leg_1 = lup
         leg1(current_1, leg_1, leg_1)
-        sleep(0.2)
+        sleep(0.1)
         current_1 = hipout
         leg1(current_1, leg_1, leg_1)
-        sleep(0.2)
+        sleep(0.1)
         leg_1 = ldown
         leg1(current_1, leg_1, leg_1)
-        sleep(0.2)
+        sleep(0.1)
     else:
         current_1 += (hipdiff/3)
     if current_2 == hipout:
         leg_2 = lup
         leg2(current_2, leg_2, leg_2)
-        sleep(0.2)
+        sleep(0.1)
         current_2 = hipin
         leg2(current_2, leg_2, leg_2)
-        sleep(0.2)
+        sleep(0.1)
         leg_2 = ldown
         leg2(current_2, leg_2, leg_2)
-        sleep(0.2)
+        sleep(0.1)
     else:
         current_2 -= (hipdiff/3)
     if current_3 == hipout:
         leg_3 = lup
         leg3(current_3, leg_3, leg_3)
-        sleep(0.2)
+        sleep(0.1)
         current_3 = hipin
         leg3(current_3, leg_3, leg_3)
-        sleep(0.2)
+        sleep(0.1)
         leg_3 = ldown
         leg3(current_3, leg_3, leg_3)
-        sleep(0.2)
+        sleep(0.1)
     else:
         current_3 -= (hipdiff/3)
         leg_3 = ldown
     if current_4 == hipin:
         leg_4 = lup
         leg4(current_4, leg_4, leg_4)
-        sleep(0.2)
+        sleep(0.1)
         current_4 = hipout
         leg4(current_4, leg_4, leg_4)
-        sleep(0.2)
+        sleep(0.1)
         leg_4 = ldown
         leg4(current_4, leg_4, leg_4)
-        sleep(0.2)
+        sleep(0.1)
     else:
         current_4 += (hipdiff/3)
         leg_4 = ldown
