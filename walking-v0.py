@@ -41,7 +41,7 @@ leg2(current_2, lup, lup)
 leg3(current_3, lup, lup)
 leg4(current_4, lup, lup)
 
-for i in range(8):
+for i in range(32):
     current_1 -= (hipdiff/3)
     current_2 -= (hipdiff/3)
     current_3 -= (hipdiff/3)
