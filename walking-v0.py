@@ -26,7 +26,7 @@ def leg4(angle1, angle2, angle3):
 hipin = 180
 hipout = 90
 
-ldown = 100
+ldown = 90
 lup = 180
 
 hipdiff = hipin - hipout
