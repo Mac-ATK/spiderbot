@@ -75,7 +75,7 @@ for i in range(32):
     leg2(current_2, leg_2, leg_2)
     leg3(current_3, leg_3, leg_3)
     leg4(current_4, leg_4, leg_4)
-    sleep(0.5)
+    sleep(0.2)
 
 
 
