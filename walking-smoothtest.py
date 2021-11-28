@@ -71,12 +71,15 @@ def alllegs(hip1, leg1, hip2, leg2, hip3, leg3, hip4, leg4):
 
 
 def leg1(hip, leg):
-    #50 is used because it's about how many cycles for 90% 10% ratio, change total alongside ratio
+    #50 is used because it's about how many cycles for 90% 10% ratio to get to target, change total alongside ratio
     for i in range(50):
+        #i had to leard about global variables just for this
         global current_1
         global leg_1
+        #figure out the temporary position for the servos based on current position
         temp_hip = round((current_1 * 0.9) + (hip * 0.1),0)
         temp_leg = round((leg_1 * 0.9) + (leg * 0.1),0)
+        #move to the temporary position
         kit.servo[0].angle = 180 - temp_hip
         kit.servo[1].angle = 180 - temp_leg
         kit.servo[2].angle = 180 - temp_leg
@@ -88,6 +91,7 @@ def leg1(hip, leg):
     kit.servo[0].angle = 180 - hip
     kit.servo[1].angle = 180 - leg
     kit.servo[2].angle = 180 - leg
+    #store that position
     current_1 = hip
     leg_1 = leg
 
