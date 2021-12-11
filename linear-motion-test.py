@@ -26,9 +26,9 @@ def leg1(shoulder, elbow, wrist):
         p_wrist = t_wrist
         sleep(0.05)
     #to round it off and move to the target distance
-    kit.servo[0].angle = 180 - shoulder
-    kit.servo[1].angle = 180 - elbow
-    kit.servo[2].angle = 180 - wrist
+    kit.servo[3].angle = 180 - shoulder
+    kit.servo[4].angle = 180 - elbow
+    kit.servo[5].angle = 180 - wrist
     #store that position
     p_shoulder = shoulder
     p_elbow = elbow
