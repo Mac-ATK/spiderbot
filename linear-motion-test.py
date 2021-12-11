@@ -161,9 +161,9 @@ p_elbow = position[1]
 p_wrist = position[2]
 
 
-kit.servo[0].angle = 180 - p_shoulder
-kit.servo[1].angle = 180 - p_elbow
-kit.servo[2].angle = 180 - p_wrist
+kit.servo[3].angle = 180 - p_shoulder
+kit.servo[4].angle = 180 - p_elbow
+kit.servo[5].angle = 180 - p_wrist
 
 target = [167.5, 138.5, 131.5]
 
