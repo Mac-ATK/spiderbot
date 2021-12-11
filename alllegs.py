@@ -3,16 +3,9 @@ kit = ServoKit(channels=16)
 from time import sleep
 import threading
 
-def alllegs(hip1, leg1, hip2, leg2, hip3, leg3, hip4, leg4):
+def alllegs(shoulder1, elbow1, wrist1, shoulder2, elbow2, wrist2, shoulder3, elbow3, wrist3, shoulder4, elbow4, wrist4):
     for i in range(50):
-        global current_1
-        global leg_1
-        global current_2
-        global leg_2
-        global current_3
-        global leg_3
-        global current_4
-        global leg_4
+        global current_1, leg_1, current_2, leg_2, current_3, leg_3, current_4, leg_4
         temp_hip1 = round((current_1 * 0.9) + (hip1 * 0.1),0)
         temp_leg1 = round((leg_1 * 0.9) + (leg1 * 0.1),0)
         kit.servo[0].angle = 180 - temp_hip1
