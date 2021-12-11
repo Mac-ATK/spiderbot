@@ -12,9 +12,9 @@ class RobotStopException(Exception):
 
 #Matty's controller = 34:AF:2C:19:FE:4B
 
-shoulder = 180
-elbow = 140
-wrist = 100
+shoulder = 167.50
+elbow = 138
+wrist = 131
 
 kit.servo[0].angle = 180 - shoulder
 kit.servo[1].angle = 180 - elbow
