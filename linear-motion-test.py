@@ -17,9 +17,9 @@ def leg1(shoulder, elbow, wrist):
         t_elbow = round((p_elbow * 0.9) + (elbow * 0.1),0)
         t_wrist = round((p_wrist * 0.9) + (wrist * 0.1),0)
         #move to the temporary position
-        kit.servo[0].angle = 180 - t_shoulder
-        kit.servo[1].angle = 180 - t_elbow
-        kit.servo[2].angle = 180 - t_wrist
+        kit.servo[3].angle = 180 - t_shoulder
+        kit.servo[4].angle = 180 - t_elbow
+        kit.servo[5].angle = 180 - t_wrist
         #store the new position
         p_shoulder = t_shoulder
         p_elbow = t_elbow
