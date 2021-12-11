@@ -23,6 +23,8 @@ leg_positions = {
 }
 
 for leg in legs:
+    print(leg)
     for i in range(len(legs[leg])):
         legs[leg][i] = leg_positions[leg][i]
+        print(legs[leg][i])
 
