@@ -23,8 +23,9 @@ leg_positions = {
 }
 
 for leg in legs:
-    print(leg)
     for i in range(len(legs[leg])):
-        legs[leg][i].angle = leg_positions[leg][i]
-        print(legs[leg][i])
+        if leg in ["leg1", "leg3"]:
+            legs[leg][i].angle = 180 - leg_positions[leg][i]
+        else: 
+            legs[leg][i].angle = leg_positions[leg][i]
 
