@@ -78,7 +78,7 @@ def reset_leg(leg):
 
 
 while True:
-    for leg in reversed(legs): 
+    for leg in reversed(legs.keys()): 
         if leg in ["leg1", "leg2"]:
             leg_targets[leg] -= 1
             if leg_targets[leg] < 0:
