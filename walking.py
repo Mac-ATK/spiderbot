@@ -9,10 +9,10 @@ positions = [
 ]
 
 legs = {
-    "leg1" : [kit.servo[0].angle, kit.servo[1].angle, kit.servo[2].angle], 
-    "leg2" : [kit.servo[3].angle, kit.servo[4].angle, kit.servo[5].angle],
-    "leg3" : [kit.servo[6].angle, kit.servo[7].angle, kit.servo[8].angle],
-    "leg4" : [kit.servo[9].angle, kit.servo[10].angle, kit.servo[11].angle]
+    "leg1" : [kit.servo[0], kit.servo[1], kit.servo[2]], 
+    "leg2" : [kit.servo[3], kit.servo[4], kit.servo[5]],
+    "leg3" : [kit.servo[6], kit.servo[7], kit.servo[8]],
+    "leg4" : [kit.servo[9], kit.servo[10], kit.servo[11]]
 }
 
 leg_positions = {
@@ -25,6 +25,6 @@ leg_positions = {
 for leg in legs:
     print(leg)
     for i in range(len(legs[leg])):
-        legs[leg][i] = leg_positions[leg][i]
+        legs[leg][i].angle = leg_positions[leg][i]
         print(legs[leg][i])
 
