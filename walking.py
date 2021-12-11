@@ -62,7 +62,7 @@ def reset_leg(leg):
     leg_positions[leg][1] = 180
     for i in range(50): # Gradual move
         for i in range(len(legs[leg])):
-            temp = round((leg_positions[leg][i] * 0.9) + (leg_targets[leg][i] * 0.1),0)
+            temp = round((leg_positions[leg][i] * 0.9) + (positions[leg_targets[leg]][i] * 0.1),0)
             if leg in ["leg1", "leg3"]: 
                 legs[leg][i].angle = 180 - temp
             else: 
@@ -71,10 +71,10 @@ def reset_leg(leg):
     
     for i in range(len(legs[leg])):
         if leg in ["leg1", "leg3"]: 
-            legs[leg][i].angle = 180 - leg_targets[leg][i]
+            legs[leg][i].angle = 180 - positions[leg_targets[leg]][i]
         else: 
-            legs[leg][i].angle = leg_targets[leg][i]
-        leg_positions[leg][i] = leg_targets[leg][i]
+            legs[leg][i].angle = positions[leg_targets[leg]][i]
+        leg_positions[leg][i] = positions[leg_targets[leg]][i]
 
 
 while True:
