@@ -18,7 +18,7 @@ legs = {
 leg_positions = {
     "leg1" : positions[1],
     "leg2" : positions[0],
-    "leg3" : positions[0]s,
+    "leg3" : positions[0],
     "leg4" : positions[1]
 }
 
