@@ -22,6 +22,13 @@ leg_positions = {
     "leg4" : positions[1]
 }
 
+leg_targets = {
+    "leg1" : 1,
+    "leg2" : 0,
+    "leg3" : 0,
+    "leg4" : 1
+}
+
 for leg in legs:
     for i in range(len(legs[leg])):
         if leg in ["leg1", "leg3"]:
@@ -29,3 +36,59 @@ for leg in legs:
         else: 
             legs[leg][i].angle = leg_positions[leg][i]
 
+def all_legs():
+    global leg_positions
+    for i in range(50): # Gradual move
+        for leg in legs:
+            for i in range(len(legs[leg])):
+                temp = round((leg_positions[leg][i] * 0.9) + (positions[leg_targets[leg]][i] * 0.1),0)
+                if leg in ["leg1", "leg3"]: 
+                    legs[leg][i].angle = 180 - temp
+                else: 
+                    legs[leg][i].angle = temp
+                leg_positions[leg][i] = temp
+    
+    for leg in legs: # Final set to exact angle
+        for i in range(len(legs[leg])):
+            if leg in ["leg1", "leg3"]: 
+                legs[leg][i].angle = 180 - positions[leg_targets[leg]][i]
+            else: 
+                legs[leg][i].angle = positions[leg_targets[leg]][i]
+            leg_positions[leg][i] = positions[leg_targets[leg]][i]
+
+def reset_leg(leg):
+    global leg_positions
+    legs[leg][1].angle = 180
+    leg_positions[leg][1] = 180
+    for i in range(50): # Gradual move
+        for i in range(len(legs[leg])):
+            temp = round((leg_positions[leg][i] * 0.9) + (leg_targets[leg][i] * 0.1),0)
+            if leg in ["leg1", "leg3"]: 
+                legs[leg][i].angle = 180 - temp
+            else: 
+                legs[leg][i].angle = temp
+            leg_positions[leg][i] = temp
+    
+    for i in range(len(legs[leg])):
+        if leg in ["leg1", "leg3"]: 
+            legs[leg][i].angle = 180 - leg_targets[leg][i]
+        else: 
+            legs[leg][i].angle = leg_targets[leg][i]
+        leg_positions[leg][i] = leg_targets[leg][i]
+
+
+while True:
+    for leg in reversed(legs): 
+        if leg in ["leg1", "leg2"]:
+            leg_targets[leg] -= 1
+            if leg_targets[leg] < 0:
+                leg_targets[leg] = 2
+                reset_leg(leg)
+                leg_targets[leg] = 1
+        else:
+            leg_targets[leg] += 1
+            if leg_targets[leg] > 2:
+                leg_targets[leg] = 0
+                reset_leg(leg)
+                leg_targets[leg] = 1
+    all_legs()
