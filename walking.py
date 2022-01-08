@@ -40,6 +40,7 @@ def all_legs():
     global leg_positions
     for i in range(50): # Gradual move
         for leg in legs:
+            print(leg)
             for i in range(len(legs[leg])):
                 temp = round((leg_positions[leg][i] * 0.9) + (positions[leg_targets[leg]][i] * 0.1),0)
                 if leg in ["leg1", "leg3"]: 
